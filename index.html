@@ -10,13 +10,16 @@
     <meta property="og:description" content="Modern web ve masaüstü uygulamaları geliştiriyorum.">
     <meta property="og:type" content="website">
     
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/favicon.png">
+    
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="css/style.css">
     
-    <!-- ✅ Google Analytics 4 (HEAD içinde olmalı) -->
+    <!-- Google Analytics 4 -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-MY2BYKZN8Y"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -27,34 +30,27 @@
     
     <title>Kan Kılıç — Yazılım Mühendisi</title>
 </head>
-<head>
-    <!-- ... -->
-    <link rel="icon" type="image/png" href="/favicon.png">
-    <!-- Veya SVG için: -->
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-</head>
 <body>
     <!-- Skip link for accessibility -->
     <a href="#main" class="skip-link">İçeriğe atla</a>
 
     <!-- Navigation -->
-<header class="navbar">
-    <nav class="container nav-container">
-        <!-- ✅ Logo değiştirildi -->
-        <a href="#" class="logo">Kan Kılıç<span>.</span></a>
-        
-        <button class="nav-toggle" aria-label="Menüyü aç" aria-expanded="false">
-            <span class="hamburger"></span>
-        </button>
-        
-        <ul class="nav-menu">
-            <li><a href="#about">Hakkımda</a></li>
-            <li><a href="#skills">Yetkinlikler</a></li>
-            <li><a href="#projects">Projeler</a></li>
-            <li><a href="#contact">İletişim</a></li>
-        </ul>
-    </nav>
-</header>
+    <header class="navbar">
+        <nav class="container nav-container">
+            <a href="#" class="logo">Kan Kılıç<span>.</span></a>
+            
+            <button class="nav-toggle" aria-label="Menüyü aç" aria-expanded="false">
+                <span class="hamburger"></span>
+            </button>
+            
+            <ul class="nav-menu">
+                <li><a href="#about">Hakkımda</a></li>
+                <li><a href="#skills">Yetkinlikler</a></li>
+                <li><a href="#projects">Projeler</a></li>
+                <li><a href="#contact">İletişim</a></li>
+            </ul>
+        </nav>
+    </header>
 
     <main id="main">
         <!-- Hero Section -->
@@ -69,7 +65,6 @@
                 <div class="hero-actions">
                     <a href="#projects" class="btn btn-primary">Projelerimi Gör</a>
                     <a href="#contact" class="btn btn-outline">İletişime Geç</a>
-                    <!-- ✅ CV İndir Butonu (Hero'ya eklendi) -->
                     <a href="cv/kan-kilic-cv.pdf" download class="btn btn-outline" onclick="trackCVDownload()">
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
@@ -155,139 +150,133 @@
             </div>
         </section>
 
-        <!-- Projects Section -->
+        <!-- Projects Section (TEK ve DÜZGÜN) -->
         <section id="projects" class="section">
             <div class="container">
                 <h2 class="section-title">Projeler</h2>
                 <div class="projects-grid">
 
-                  <!-- Projects Section -->
-<section id="projects" class="section">
-    <div class="container">
-        <h2 class="section-title">Projeler</h2>
-        <div class="projects-grid">
+                    <!-- Project Card 1: BorçDefteri -->
+                    <article class="project-card">
+                        <div class="project-image">
+                            <img src="images/projects/borcdefteri.png" alt="BorçDefteri Uygulaması" loading="lazy">
+                        </div>
+                        <div class="project-content">
+                            <h3>BorçDefteri</h3>
+                            <p>Kişisel borç/alacak takibi için geliştirilmiş, PWA destekli mobil uyumlu uygulama.</p>
+                            <div class="project-tech">
+                                <span>React</span>
+                                <span>PWA</span>
+                                <span>LocalStorage</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://borc-defteri.pages.dev" target="_blank" class="link-external">Canlı Site ↗</a>
+                                <a href="https://github.com/kanklc34/borc-defteri" target="_blank" class="link-github">Kod ↗</a>
+                            </div>
+                        </div>
+                    </article>
 
-            <!-- Project Card 1: BorçDefteri -->
-            <article class="project-card">
-                <div class="project-image">
-                    <img src="images/projects/borcdefteri.png" alt="BorçDefteri Uygulaması" loading="lazy">
-                </div>
-                <div class="project-content">
-                    <h3>BorçDefteri</h3>
-                    <p>Kişisel borç/alacak takibi için geliştirilmiş, PWA destekli mobil uyumlu uygulama.</p>
-                    <div class="project-tech">
-                        <span>React</span>
-                        <span>PWA</span>
-                        <span>LocalStorage</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://borc-defteri.pages.dev" target="_blank" class="link-external">Canlı Demo ↗</a>
-                        <a href="https://github.com/kanklc34/borc-defteri" target="_blank" class="link-github">Kod ↗</a>
-                    </div>
-                </div>
-            </article>
+                    <!-- Project Card 2: Elimde Ne Var? -->
+                    <article class="project-card">
+                        <div class="project-image">
+                            <img src="images/projects/elimdenevar.png" alt="Elimde Ne Var Mutfak Asistanı" loading="lazy">
+                        </div>
+                        <div class="project-content">
+                            <h3>Elimde Ne Var?</h3>
+                            <p>Kullanıcıların elindeki malzemelere göre tarif öneren, VKİ ve kalori takibi yapan mutfak asistanı.</p>
+                            <div class="project-tech">
+                                <span>React</span>
+                                <span>Firebase</span>
+                                <span>Realtime DB</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://elimdenevar.pages.dev" target="_blank" class="link-external">Canlı Site ↗</a>
+                                <a href="#" class="link-github">Kod ↗</a>
+                            </div>
+                        </div>
+                    </article>
 
-            <!-- Project Card 2: Elimde Ne Var? -->
-            <article class="project-card">
-                <div class="project-image">
-                    <img src="images/projects/elimdenevar.png" alt="Elimde Ne Var Mutfak Asistanı" loading="lazy">
-                </div>
-                <div class="project-content">
-                    <h3>Elimde Ne Var?</h3>
-                    <p>Kullanıcıların elindeki malzemelere göre tarif öneren, VKİ ve kalori takibi yapan mutfak asistanı.</p>
-                    <div class="project-tech">
-                        <span>React</span>
-                        <span>Firebase</span>
-                        <span>Realtime DB</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://elimdenevar.pages.dev" target="_blank" class="link-external">Canlı Demo ↗</a>
-                        <a href="#" class="link-github">Kod ↗</a>
-                    </div>
-                </div>
-            </article>
+                    <!-- Project Card 3: Envanter Sistemi -->
+                    <article class="project-card">
+                        <div class="project-image">
+                            <img src="images/projects/edts.png" alt="Envanter Depo Yönetim Sistemi" loading="lazy">
+                        </div>
+                        <div class="project-content">
+                            <h3>Envanter Yönetim Sistemi</h3>
+                            <p>Depo giriş-çıkış işlemlerini yöneten, chatbot destekli C# masaüstü uygulaması.</p>
+                            <div class="project-tech">
+                                <span>C#</span>
+                                <span>.NET</span>
+                                <span>SQL Server</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/mrtkgr1/edts" target="_blank" class="link-github">Kod ↗</a>
+                            </div>
+                        </div>
+                    </article>
 
-            <!-- Project Card 3: Envanter Sistemi -->
-            <article class="project-card">
-                <div class="project-image">
-                    <img src="images/projects/edts.png" alt="Envanter Depo Yönetim Sistemi" loading="lazy">
-                </div>
-                <div class="project-content">
-                    <h3>Envanter Yönetim Sistemi</h3>
-                    <p>Depo giriş-çıkış işlemlerini yöneten, chatbot destekli C# masaüstü uygulaması.</p>
-                    <div class="project-tech">
-                        <span>C#</span>
-                        <span>.NET</span>
-                        <span>SQL Server</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/mrtkgr1/edts" target="_blank" class="link-github">Kod ↗</a>
-                    </div>
-                </div>
-            </article>
+                    <!-- Project Card 4: Personel Puantaj -->
+                    <article class="project-card">
+                        <div class="project-image">
+                            <img src="images/projects/puantaj.png" alt="Personel Puantaj Sistemi" loading="lazy">
+                        </div>
+                        <div class="project-content">
+                            <h3>Personel Puantaj Sistemi</h3>
+                            <p>JS ve LocalStorage ile çalışan, Excel raporu veren ve internetsiz çalışan (PWA) takip uygulaması.</p>
+                            <div class="project-tech">
+                                <span>JavaScript</span>
+                                <span>PWA</span>
+                                <span>Excel Export</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://kanklc34.github.io/personel-puantaj-sistemi/" target="_blank" class="link-external">Canlı Site ↗</a>
+                                <a href="https://github.com/kanklc34/personel-puantaj-sistemi" target="_blank" class="link-github">Kod ↗</a>
+                            </div>
+                        </div>
+                    </article>
 
-            <!-- Project Card 4: Personel Puantaj -->
-            <article class="project-card">
-                <div class="project-image">
-                    <img src="images/projects/puantaj.png" alt="Personel Puantaj Sistemi" loading="lazy">
-                </div>
-                <div class="project-content">
-                    <h3>Personel Puantaj Sistemi</h3>
-                    <p>JS ve LocalStorage ile çalışan, Excel raporu veren ve internetsiz çalışan (PWA) takip uygulaması.</p>
-                    <div class="project-tech">
-                        <span>JavaScript</span>
-                        <span>PWA</span>
-                        <span>Excel Export</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://kanklc34.github.io/personel-puantaj-sistemi/" target="_blank" class="link-external">Canlı Demo ↗</a>
-                        <a href="https://github.com/kanklc34/personel-puantaj-sistemi" target="_blank" class="link-github">Kod ↗</a>
-                    </div>
-                </div>
-            </article>
+                    <!-- Project Card 5: Kasap Pro -->
+                    <article class="project-card">
+                        <div class="project-image">
+                            <img src="images/projects/kasappro.png" alt="Kasap Pro Satış Takip" loading="lazy">
+                        </div>
+                        <div class="project-content">
+                            <h3>Kasap Pro</h3>
+                            <p>.NET MAUI ve SQLite tabanlı, barkod tarama ve otomatik gramaj hesaplama özellikli Android satış takip sistemi.</p>
+                            <div class="project-tech">
+                                <span>.NET MAUI</span>
+                                <span>SQLite</span>
+                                <span>C#</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="link-github">Detaylar ↗</a>
+                            </div>
+                        </div>
+                    </article>
 
-            <!-- Project Card 5: Kasap Pro -->
-            <article class="project-card">
-                <div class="project-image">
-                    <img src="images/projects/kasappro.png" alt="Kasap Pro Satış Takip" loading="lazy">
-                </div>
-                <div class="project-content">
-                    <h3>Kasap Pro</h3>
-                    <p>.NET MAUI ve SQLite tabanlı, barkod tarama ve otomatik gramaj hesaplama özellikli Android satış takip sistemi.</p>
-                    <div class="project-tech">
-                        <span>.NET MAUI</span>
-                        <span>SQLite</span>
-                        <span>C#</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="#" class="link-github">Detaylar ↗</a>
-                    </div>
-                </div>
-            </article>
+                    <!-- Project Card 6: Portfolyo Sitesi -->
+                    <article class="project-card">
+                        <div class="project-image">
+                            <img src="images/projects/portfolyo.png" alt="Kişisel Portfolyo Sitesi" loading="lazy">
+                        </div>
+                        <div class="project-content">
+                            <h3>Kişisel Portfolyo</h3>
+                            <p>Modern ve minimalist tasarımla geliştirilmiş, erişilebilirlik odaklı responsive web sitem.</p>
+                            <div class="project-tech">
+                                <span>HTML5</span>
+                                <span>CSS3</span>
+                                <span>JavaScript</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://kankilic.pages.dev" target="_blank" class="link-external">Canlı Site ↗</a>
+                                <a href="https://github.com/kanklc34/portfolio" target="_blank" class="link-github">Kod ↗</a>
+                            </div>
+                        </div>
+                    </article>
 
-            <!-- Project Card 6: Portfolyo Sitesi -->
-            <article class="project-card">
-                <div class="project-image">
-                    <img src="images/projects/portfolio.png" alt="Kişisel Portfolyo Sitesi" loading="lazy">
                 </div>
-                <div class="project-content">
-                    <h3>Kişisel Portfolyo</h3>
-                    <p>Modern ve minimalist tasarımla geliştirilmiş, erişilebilirlik odaklı responsive web sitem.</p>
-                    <div class="project-tech">
-                        <span>HTML5</span>
-                        <span>CSS3</span>
-                        <span>JavaScript</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://kankilic.pages.dev" target="_blank" class="link-external">Canlı Site ↗</a>
-                        <a href="https://github.com/kanklc34/portfolio" target="_blank" class="link-github">Kod ↗</a>
-                    </div>
-                </div>
-            </article>
-
-        </div>
-    </div>
-</section>
+            </div>
+        </section>
 
         <!-- Contact Section -->
         <section id="contact" class="section section-alt">
@@ -304,7 +293,6 @@
                         <span>kanklcx1903@gmail.com</span>
                     </a>
                     
-                    <!-- ✅ CV İndir Linki (Contact'ta da kalsın) -->
                     <a href="cv/kan-kilic-cv.pdf" download class="contact-link" onclick="trackCVDownload()">
                         <span class="icon">📄</span>
                         <span>CV'mi İndir (PDF)</span>
@@ -325,16 +313,16 @@
 
     <!-- Footer -->
     <footer class="footer">
-    <div class="container footer-content">
-        <p>&copy; <span id="year"></span> Kan Kılıç. Tüm hakları saklıdır.</p>
-        <p class="footer-note">
-            Built with 
-            <span style="color: var(--color-primary);">❤️</span> 
-            and 
-            <code style="background: var(--color-bg-alt); padding: 2px 6px; border-radius: 4px; font-family: var(--font-mono); font-size: 0.8em;">HTML/CSS/JS</code>
-        </p>
-    </div>
-</footer>
+        <div class="container footer-content">
+            <p>&copy; <span id="year"></span> Kan Kılıç. Tüm hakları saklıdır.</p>
+            <p class="footer-note">
+                Built with 
+                <span style="color: var(--color-primary);">❤️</span> 
+                and 
+                <code style="background: var(--color-bg-alt); padding: 2px 6px; border-radius: 4px; font-family: var(--font-mono); font-size: 0.8em;">HTML/CSS/JS</code>
+            </p>
+        </div>
+    </footer>
 
     <script src="js/main.js" defer></script>
 </body>
