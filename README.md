@@ -27,3 +27,96 @@ Sitede yer alan ve aktif olarak geliştirdiğim başlıca projeler:
 ## 🛠️ Kullanılan Teknolojiler
 
 ### Frontend
+✅ HTML5 (Semantik)
+✅ CSS3 (Flexbox, Grid, Custom Properties)
+✅ JavaScript (ES6+, Vanilla)
+✅ Google Fonts (Inter)
+✅ FontAwesome Icons
+
+### Özellikler🎨 Modern & minimalist tasarım
+📱 Mobil-first responsive yapı
+🌗 Otomatik dark/light mode desteği
+♿ Erişilebilirlik odaklı (WCAG uyumlu)
+⚡ Performans optimize edilmiş
+📊 Google Analytics 4 entegrasyonu
+📄 İndirilebilir CV özelliği
+🔍 SEO dostu meta etiketleri + Structured Data
+
+---
+
+## 📁 Proje Yapısı
+portfolio/
+├── index.html # Ana sayfa (semantik HTML5)
+├── css/
+│ └── style.css # Tüm stiller (CSS Variables ile)
+├── js/
+│ └── main.js # Etkileşimler, animasyonlar, analytics
+├── images/
+│ ├── projects/ # Proje görselleri (lazy loading)
+│ └── preview.png # README önizleme görseli
+├── cv/
+│ └── kan-kilic-cv.pdf # İndirilebilir CV (PDF)
+├── README.md # Bu dosya
+└── LICENSE # MIT Lisansı
+
+---
+
+## 🚀 Yerelde Çalıştırma
+
+```bash
+# 1. Repoyu klonla
+git clone https://github.com/kanklc34/portfolio.git
+cd portfolio
+
+# 2. Basit bir HTTP sunucusu başlat
+# Python 3 ile:
+python -m http.server 8000
+
+# Veya Node.js ile:
+npx serve .
+
+# Veya VS Code Live Server eklentisi ile
+
+# 3. Tarayıcıda aç
+http://localhost:8000
+🌐 Deploy (Cloudflare Pages)
+Bu proje Cloudflare Pages üzerinde otomatik deploy edilir:
+GitHub repo'nu Cloudflare Pages'a bağla
+Build settings:
+Framework preset: None (static site)
+Build command: (boş bırak)
+Build output directory: / (root)
+main branch'ine her push'ta otomatik deploy edilir 🎉
+
+🔗 Canlı site: https://kankilic.pages.dev
+📊 Analytics & Gizlilik
+Bu site Google Analytics 4 kullanır. Sadece anonim kullanım verileri toplanır:
+✅ Sayfa görüntülemeleri
+✅ Buton tıklamaları (projeler, CV indirme, iletişim)
+✅ Cihaz tipi ve genel lokasyon istatistikleri
+❌ Kişisel bilgi toplama YOK
+❌ Çerez (cookie) kullanımı YOK🤝 Katkıda Bulunma
+
+Katkılar her zaman welcome! 🙌
+Bu repoyu fork'la
+Yeni branch oluştur: git checkout -b feature/yeni-ozellik
+Değişikliklerini commit'le: git commit -m 'feat: yeni özellik eklendi'
+Branch'ini push'la: git push origin feature/yeni-ozellik
+Pull Request aç 🎉
+Detaylar için Google Analytics Privacy sayfasını inceleyebilirsin.
+
+📄 Lisans
+Bu proje MIT Lisansı altında lisanslanmıştır.
+
+📬 İletişim
+Projelerim hakkında daha fazla bilgi almak veya iş birliği yapmak için:
+Platform
+Link
+🌐 Portfolio
+kankilic.pages.dev
+💻 GitHub
+github.com/kanklc34
+💼 LinkedIn
+Kan Kılıç
+📧 E-posta
+kanklcx1903@gmail.com
