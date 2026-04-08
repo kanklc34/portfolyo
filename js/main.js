@@ -73,20 +73,18 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(el);
     });
     
-// CV indirme takibi
-function trackCVDownload() {
-    // Google Analytics event (aşağıda kurulumu var)
-    if (typeof gtag !== 'undefined') {
-        gtag('event', 'download', {
-            'event_category': 'CV',
-            'event_label': 'CV Download',
-            'value': 1
-        });
-    }
-    
-    // Console log (geliştirme aşamasında)
-    console.log('CV indirildi!');
-}
+    // CV indirme takibi
+    window.trackCVDownload = function trackCVDownload() {
+        if (typeof gtag !== 'undefined') {
+            gtag('event', 'download', {
+                event_category: 'CV',
+                event_label: 'CV Download',
+                value: 1
+            });
+        }
+
+        console.log('CV indirildi!');
+    };
     // 5. Resim yükleme hataları için fallback
     document.querySelectorAll('img').forEach(img => {
         img.addEventListener('error', function() {
