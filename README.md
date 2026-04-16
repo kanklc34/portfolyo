@@ -1,0 +1,2 @@
+# Portfolyom
+Kiþisel portfolyo sitesi.
