@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light dark">
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0f172a">
     <meta name="description" content="Kan Kılıç - Yapay zeka, web ve uygulama geliştirme alanlarında projeler üreten yazılım geliştirici. React, C#, .NET ve modern ürün deneyimleri odağımda.">
     
     <!-- SEO & Social -->
@@ -65,7 +68,7 @@
                 <div class="hero-actions">
                     <a href="#projects" class="btn btn-primary">Projelerimi Gör</a>
                     <a href="#contact" class="btn btn-outline">İletişime Geç</a>
-                    <a href="cv/kan-kilic-cv.pdf" download class="btn btn-outline" onclick="trackCVDownload()">
+                    <a href="cv/kan-kilic-cv.pdf" download class="btn btn-outline" data-track-cv="true">
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
                             <polyline points="7 10 12 15 17 10"></polyline>
@@ -164,7 +167,7 @@
                     <!-- Project Card 1: BorçDefteri -->
                     <article class="project-card">
                         <div class="project-image">
-                            <img src="images/projects/borcdefteri.png" alt="BorçDefteri Uygulaması" loading="lazy">
+                            <img src="images/projects/borcdefteri.webp" alt="BorçDefteri Uygulaması" loading="lazy">
                         </div>
                         <div class="project-content">
                             <h3>BorçDefteri</h3>
@@ -175,8 +178,8 @@
                                 <span>LocalStorage</span>
                             </div>
                             <div class="project-links">
-                                <a href="https://borc-defteri.pages.dev" target="_blank" class="link-external">Canlı Site ↗</a>
-                                <a href="https://github.com/kanklc34/borc-defteri" target="_blank" class="link-github">Kod ↗</a>
+                                <a href="https://borc-defteri.pages.dev" target="_blank" rel="noopener noreferrer" class="link-external">Canlı Site ↗</a>
+                                <a href="https://github.com/kanklc34/borc-defteri" target="_blank" rel="noopener noreferrer" class="link-github">Kod ↗</a>
                             </div>
                         </div>
                     </article>
@@ -184,7 +187,7 @@
                     <!-- Project Card 2: Elimde Ne Var? -->
                     <article class="project-card">
                         <div class="project-image">
-                            <img src="images/projects/elimdenevar.png" alt="Elimde Ne Var Mutfak Asistanı" loading="lazy">
+                            <img src="images/projects/elimdenevar.webp" alt="Elimde Ne Var Mutfak Asistanı" loading="lazy">
                         </div>
                         <div class="project-content">
                             <h3>Elimde Ne Var?</h3>
@@ -195,8 +198,8 @@
                                 <span>Realtime DB</span>
                             </div>
                             <div class="project-links">
-                                <a href="https://elimdenevar.pages.dev" target="_blank" class="link-external">Canlı Site ↗</a>
-                                <a href="https://github.com/kanklc34/elimdenevar" target="_blank" class="link-github">Kod ↗</a>
+                                <a href="https://elimdenevar.pages.dev" target="_blank" rel="noopener noreferrer" class="link-external">Canlı Site ↗</a>
+                                <a href="https://github.com/kanklc34/elimdenevar" target="_blank" rel="noopener noreferrer" class="link-github">Kod ↗</a>
                             </div>
                         </div>
                     </article>
@@ -204,7 +207,7 @@
                     <!-- Project Card 3: Envanter Sistemi -->
                     <article class="project-card">
                         <div class="project-image">
-                            <img src="images/projects/edts.png" alt="Envanter Depo Yönetim Sistemi" loading="lazy">
+                            <img src="images/projects/edts.webp" alt="Envanter Depo Yönetim Sistemi" loading="lazy">
                         </div>
                         <div class="project-content">
                             <h3>Envanter Yönetim Sistemi</h3>
@@ -215,7 +218,7 @@
                                 <span>SQL Server</span>
                             </div>
                             <div class="project-links">
-                                <a href="https://github.com/kanklc34/edts" target="_blank" class="link-github">Kod ↗</a>
+                                <a href="https://github.com/kanklc34/edts" target="_blank" rel="noopener noreferrer" class="link-github">Kod ↗</a>
                             </div>
                         </div>
                     </article>
@@ -223,7 +226,7 @@
                     <!-- Project Card 4: Personel Puantaj -->
                     <article class="project-card">
                         <div class="project-image">
-                            <img src="images/projects/puantaj.png" alt="Personel Puantaj Sistemi" loading="lazy">
+                            <img src="images/projects/puantaj.webp" alt="Personel Puantaj Sistemi" loading="lazy">
                         </div>
                         <div class="project-content">
                             <h3>Personel Puantaj Sistemi</h3>
@@ -234,8 +237,8 @@
                                 <span>Excel Export</span>
                             </div>
                             <div class="project-links">
-                                <a href="https://kanklc34.github.io/personel-puantaj-sistemi/" target="_blank" class="link-external">Canlı Site ↗</a>
-                                <a href="https://github.com/kanklc34/personel-puantaj-sistemi" target="_blank" class="link-github">Kod ↗</a>
+                                <a href="https://kanklc34.github.io/personel-puantaj-sistemi/" target="_blank" rel="noopener noreferrer" class="link-external">Canlı Site ↗</a>
+                                <a href="https://github.com/kanklc34/personel-puantaj-sistemi" target="_blank" rel="noopener noreferrer" class="link-github">Kod ↗</a>
                             </div>
                         </div>
                     </article>
@@ -243,7 +246,7 @@
                     <!-- Project Card 5: Kasap Pro -->
 <article class="project-card">
     <div class="project-image">
-        <img src="images/projects/kasappro.png" alt="Kasap Pro Satış Takip" loading="lazy">
+        <img src="images/projects/kasappro.webp" alt="Kasap Pro Satış Takip" loading="lazy">
     </div>
     <div class="project-content">
         <h3>Kasap Pro</h3>
@@ -255,7 +258,7 @@
         </div>
         <div class="project-links">
             <!-- ✅ GitHub linki güncellendi -->
-            <a href="https://github.com/kanklc34/seller_system" target="_blank" class="link-github">Kod ↗</a>
+            <a href="https://github.com/kanklc34/seller_system" target="_blank" rel="noopener noreferrer" class="link-github">Kod ↗</a>
         </div>
     </div>
 </article>
@@ -263,7 +266,7 @@
                     <!-- Project Card 6: Portfolyo Sitesi -->
                     <article class="project-card">
                         <div class="project-image">
-                            <img src="images/projects/portfolyo.png" alt="Kişisel Portfolyo Sitesi" loading="lazy">
+                            <img src="images/projects/portfolyo.webp" alt="Kişisel Portfolyo Sitesi" loading="lazy">
                         </div>
                         <div class="project-content">
                             <h3>Kişisel Portfolyo</h3>
@@ -274,14 +277,14 @@
                                 <span>JavaScript</span>
                             </div>
                             <div class="project-links">
-                                <a href="https://kankilic.pages.dev" target="_blank" class="link-external">Canlı Site ↗</a>
-                                <a href="https://github.com/kanklc34/portfolyo" target="_blank" class="link-github">Kod ↗</a>
+                                <a href="https://kankilic.pages.dev" target="_blank" rel="noopener noreferrer" class="link-external">Canlı Site ↗</a>
+                                <a href="https://github.com/kanklc34/portfolyo" target="_blank" rel="noopener noreferrer" class="link-github">Kod ↗</a>
                             </div>
                         </div>
                     </article>
 <article class="project-card">
     <div class="project-image">
-        <img src="images/projects/saglikyon.png" alt="SağlıkYön açık kaynak sağlık yönlendirme aracı" loading="lazy">
+        <img src="images/projects/saglikyon.webp" alt="SağlıkYön açık kaynak sağlık yönlendirme aracı" loading="lazy">
     </div>
     <div class="project-content">
         <h3>SağlıkYön</h3>
@@ -317,16 +320,16 @@
                         <span>kanklcx1903@gmail.com</span>
                     </a>
                     
-                    <a href="cv/kan-kilic-cv.pdf" download class="contact-link" onclick="trackCVDownload()">
+                    <a href="cv/kan-kilic-cv.pdf" download class="contact-link" data-track-cv="true">
                         <span class="icon">📄</span>
                         <span>CV'mi İndir (PDF)</span>
                     </a>
                     
-                    <a href="https://github.com/kanklc34" target="_blank" class="contact-link">
+                    <a href="https://github.com/kanklc34" target="_blank" rel="noopener noreferrer" class="contact-link">
                         <span class="icon">💻</span>
                         <span>github.com/kanklc34</span>
                     </a>
-                    <a href="https://www.linkedin.com/in/kan-k%C4%B1l%C4%B1%C3%A7-005762343/" target="_blank" class="contact-link">
+                    <a href="https://www.linkedin.com/in/kan-k%C4%B1l%C4%B1%C3%A7-005762343/" target="_blank" rel="noopener noreferrer" class="contact-link">
                         <span class="icon">💼</span>
                         <span>LinkedIn Profilim</span>
                     </a>
