@@ -155,178 +155,149 @@
         </section>
 
         <!-- Projects Section (TEK ve DÜZGÜN) -->
-        <section id="projects" class="section">
-            <div class="container">
-                <h2 class="section-title">Projeler</h2>
-                <p class="section-intro">
-                    Yapay zeka, web ve uygulama geliştirme odağımı yansıtan; gerçek ihtiyaçlardan doğan ve
-                    ürünleşme yaklaşımıyla geliştirdiğim projeler.
-                </p>
-                <div class="projects-grid">
+        <!-- Projects Section -->
+<section id="projects" class="section">
+    <div class="container">
+        <h2 class="section-title">Projeler</h2>
+        <p class="section-intro">
+            Yapay zeka, web ve uygulama geliştirme odağımı yansıtan projelerim.
+        </p>
 
-                    <!-- Project Card 1: BorçDefteri -->
-                    <article class="project-card">
-                        <div class="project-image">
-                            <img src="images/projects/borcdefteri.webp" alt="BorçDefteri Uygulaması" loading="lazy">
-                        </div>
-                        <div class="project-content">
-                            <h3>BorçDefteri</h3>
-                            <p>Kişisel finans takibini kolaylaştırmak için geliştirdiğim, çevrimdışı çalışabilen ve mobilde uygulama hissi veren PWA çözümü.</p>
-                            <div class="project-tech">
-                                <span>React</span>
-                                <span>PWA</span>
-                                <span>LocalStorage</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="https://borc-defteri.pages.dev" target="_blank" rel="noopener noreferrer" class="link-external">Canlı Site ↗</a>
-                                <a href="https://github.com/kanklc34/borc-defteri" target="_blank" rel="noopener noreferrer" class="link-github">Kod ↗</a>
-                            </div>
-                        </div>
-                    </article>
-
-                    <!-- Project Card 2: Elimde Ne Var? -->
-                    <article class="project-card">
-                        <div class="project-image">
-                            <img src="images/projects/elimdenevar.webp" alt="Elimde Ne Var Mutfak Asistanı" loading="lazy">
-                        </div>
-                        <div class="project-content">
-                            <h3>Elimde Ne Var?</h3>
-                            <p>Eldeki malzemelere göre tarif öneren, kullanıcı deneyimi ile veri takibini bir araya getiren akıllı mutfak asistanı.</p>
-                            <div class="project-tech">
-                                <span>React</span>
-                                <span>Firebase</span>
-                                <span>Realtime DB</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="https://elimdenevar.pages.dev" target="_blank" rel="noopener noreferrer" class="link-external">Canlı Site ↗</a>
-                                <a href="https://github.com/kanklc34/elimdenevar" target="_blank" rel="noopener noreferrer" class="link-github">Kod ↗</a>
-                            </div>
-                        </div>
-                    </article>
-
-                    <!-- Project Card 3: Envanter Sistemi -->
-                    <article class="project-card">
-                        <div class="project-image">
-                            <img src="images/projects/edts.webp" alt="Envanter Depo Yönetim Sistemi" loading="lazy">
-                        </div>
-                        <div class="project-content">
-                            <h3>Envanter Yönetim Sistemi</h3>
-                            <p>Depo giriş-çıkış süreçlerini düzenleyen, operasyonel takibi hızlandıran ve chatbot desteği sunan C# masaüstü uygulaması.</p>
-                            <div class="project-tech">
-                                <span>C#</span>
-                                <span>.NET</span>
-                                <span>SQL Server</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="https://github.com/kanklc34/edts" target="_blank" rel="noopener noreferrer" class="link-github">Kod ↗</a>
-                            </div>
-                        </div>
-                    </article>
-
-                    <!-- Project Card 4: Personel Puantaj -->
-                    <article class="project-card">
-                        <div class="project-image">
-                            <img src="images/projects/puantaj.webp" alt="Personel Puantaj Sistemi" loading="lazy">
-                        </div>
-                        <div class="project-content">
-                            <h3>Personel Puantaj Sistemi</h3>
-                            <p>İnternetsiz ortamda da çalışabilen, Excel çıktılarıyla günlük operasyonu kolaylaştıran personel takip ve raporlama uygulaması.</p>
-                            <div class="project-tech">
-                                <span>JavaScript</span>
-                                <span>PWA</span>
-                                <span>Excel Export</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="https://kanklc34.github.io/personel-puantaj-sistemi/" target="_blank" rel="noopener noreferrer" class="link-external">Canlı Site ↗</a>
-                                <a href="https://github.com/kanklc34/personel-puantaj-sistemi" target="_blank" rel="noopener noreferrer" class="link-github">Kod ↗</a>
-                            </div>
-                        </div>
-                    </article>
-
-                    <!-- Project Card 5: Kasap Pro -->
-<article class="project-card">
-    <div class="project-image">
-        <img src="images/projects/kasappro.webp" alt="Kasap Pro Satış Takip" loading="lazy">
-    </div>
-    <div class="project-content">
-        <h3>Kasap Pro</h3>
-        <p>.NET MAUI ve SQLite ile geliştirdiğim, barkod tarama ve otomatik gramaj hesaplama özellikleriyle saha kullanımını hızlandıran Android satış takip uygulaması.</p>
-        <div class="project-tech">
-            <span>.NET MAUI</span>
-            <span>SQLite</span>
-            <span>C#</span>
+        <!-- Filtre Butonları -->
+        <div class="project-filters">
+            <button class="filter-btn active" data-filter="all">Tümü</button>
+            <button class="filter-btn" data-filter="ai">AI & Akıllı Sistemler</button>
+            <button class="filter-btn" data-filter="web">Web & PWA</button>
+            <button class="filter-btn" data-filter="desktop">Mobil & Masaüstü</button>
         </div>
-        <div class="project-links">
-            <!-- ✅ GitHub linki güncellendi -->
-            <a href="https://github.com/kanklc34/seller_system" target="_blank" rel="noopener noreferrer" class="link-github">Kod ↗</a>
-        </div>
-    </div>
-</article>
 
-<!-- Project Card 6: KariyerCraft -->
-<!-- Project Card: KariyerCraft -->
-<article class="project-card">
-    <div class="project-image">
-        <!-- Buraya kendi ekran görüntünü (kariyercraft.webp gibi) ekleyebilirsin -->
-        <img src="images/projects/kariyercraft.webp" alt="KariyerCraft RPG Simülasyonu" loading="lazy">
-    </div>
-    <div class="project-content">
-        <h3>KariyerCraft</h3>
-        <p>Gençlerin kariyer seçimlerini bir RPG simülasyonu üzerinden deneyimlemelerini sağlayan, Matrix temalı ve gerçek zamanlı yetkinlik analizi yapan web tabanlı oyun platformu.</p>
-        <div class="project-tech">
-            <span>Next.js</span>
-            <span>HTML5 Canvas</span>
-            <span>SQLite</span>
-            <span>React</span>
-        </div>
-        <div class="project-links">
-            <!-- Canlı site linkin varsa buraya ekleyebilirsin -->
-            <!-- <a href="https://kariyercraft.vercel.app" target="_blank" rel="noopener noreferrer" class="link-external">Canlı Site ↗</a> -->
-            <a href="https://github.com/kanklc34/kariyer-craft" target="_blank" rel="noopener noreferrer" class="link-github">Kod ↗</a>
-        </div>
-    </div>
-</article>
-                    <!-- Project Card 7: Portfolyo Sitesi -->
-                    <article class="project-card">
-                        <div class="project-image">
-                            <img src="images/projects/portfolyo.webp" alt="Kişisel Portfolyo Sitesi" loading="lazy">
-                        </div>
-                        <div class="project-content">
-                            <h3>Kişisel Portfolyo</h3>
-                            <p>Projelerimi, teknik yaklaşımımı ve ürün odaklı çalışma biçimimi sade, erişilebilir ve responsive bir arayüzle sunduğum kişisel web sitem.</p>
-                            <div class="project-tech">
-                                <span>HTML5</span>
-                                <span>CSS3</span>
-                                <span>JavaScript</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="https://kankilic.pages.dev" target="_blank" rel="noopener noreferrer" class="link-external">Canlı Site ↗</a>
-                                <a href="https://github.com/kanklc34/portfolyo" target="_blank" rel="noopener noreferrer" class="link-github">Kod ↗</a>
-                            </div>
-                        </div>
-                    </article>
-<article class="project-card">
-    <div class="project-image">
-        <img src="images/projects/saglikyon.webp" alt="SağlıkYön açık kaynak sağlık yönlendirme aracı" loading="lazy">
-    </div>
-    <div class="project-content">
-        <h3>SağlıkYön</h3>
-        <p>Dış API kullanmadan tamamen istemci tarafında çalışan, semptomları analiz ederek uygun branş ve başvuru aciliyeti öneren açık kaynak sağlık yönlendirme aracı.</p>
-        <div class="project-tech">
-            <span>JavaScript</span>
-            <span>Türkçe NLP</span>
-            <span>Kural Tabanlı Triage</span>
-        </div>
-        <div class="project-links">
-            <a href="https://saglikyon.pages.dev" target="_blank" rel="noopener noreferrer" class="link-external">Canlı Site ↗</a>
-            <a href="https://github.com/kanklc34/saglikyon" target="_blank" rel="noopener noreferrer" class="link-github">Kod ↗</a>
-        </div>
-    </div>
-</article>
-
+        <div class="projects-grid" id="projectGrid">
+            
+            <!-- Project 1: KariyerCraft (AI) -->
+            <article class="project-card featured-project" data-category="ai">
+                <span class="project-badge">Teknofest Finalisti</span>
+                <div class="project-image">
+                    <img src="images/projects/kariyercraft.webp" alt="KariyerCraft RPG Simülasyonu" loading="lazy">
                 </div>
-            </div>
-        </section>
+                <div class="project-content">
+                    <h3>KariyerCraft</h3>
+                    <p>Matrix temalı, RPG öğeleri içeren ve oyuncu kararlarına göre kariyer analizi yapan Next.js tabanlı platform.</p>
+                    <div class="project-tech"><span>Next.js</span><span>Canvas API</span><span>SQLite</span></div>
+                    <div class="project-links">
+                        <a href="https://github.com/kanklc34/kariyer-craft" target="_blank" rel="noopener noreferrer">Kod ↗</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Project 2: Elimde Ne Var? (AI) -->
+            <article class="project-card" data-category="ai">
+                <div class="project-image">
+                    <img src="images/projects/elimdenevar.webp" alt="Elimde Ne Var Mutfak Asistanı" loading="lazy">
+                </div>
+                <div class="project-content">
+                    <h3>Elimde Ne Var?</h3>
+                    <p>Eldeki malzemelere göre tarif öneren akıllı mutfak asistanı.</p>
+                    <div class="project-tech"><span>React</span><span>Firebase</span></div>
+                    <div class="project-links">
+                        <a href="https://elimdenevar.pages.dev" target="_blank" rel="noopener noreferrer">Canlı Site ↗</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Project 3: SağlıkYön (AI) -->
+            <article class="project-card" data-category="ai">
+                <div class="project-image">
+                    <img src="images/projects/saglikyon.webp" alt="SağlıkYön Triage" loading="lazy">
+                </div>
+                <div class="project-content">
+                    <h3>SağlıkYön</h3>
+                    <p>Semptom analizi yaparak uygun branş ve aciliyet öneren açık kaynak sağlık yönlendirme aracı.</p>
+                    <div class="project-tech"><span>JavaScript</span><span>NLP</span></div>
+                    <div class="project-links">
+                        <a href="https://saglikyon.pages.dev" target="_blank" rel="noopener noreferrer">Canlı Site ↗</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Project 4: BorçDefteri (Web) -->
+            <article class="project-card" data-category="web">
+                <div class="project-image">
+                    <img src="images/projects/borcdefteri.webp" alt="BorçDefteri" loading="lazy">
+                </div>
+                <div class="project-content">
+                    <h3>BorçDefteri</h3>
+                    <p>Kişisel finans takibini kolaylaştıran çevrimdışı öncelikli PWA çözümü.</p>
+                    <div class="project-tech"><span>React</span><span>PWA</span></div>
+                    <div class="project-links">
+                        <a href="https://borc-defteri.pages.dev" target="_blank" rel="noopener noreferrer">Canlı Site ↗</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Project 5: Personel Puantaj (Web) -->
+            <article class="project-card" data-category="web">
+                <div class="project-image">
+                    <img src="images/projects/puantaj.webp" alt="Puantaj Sistemi" loading="lazy">
+                </div>
+                <div class="project-content">
+                    <h3>Personel Puantaj Sistemi</h3>
+                    <p>Günlük operasyonu kolaylaştıran, Excel çıktıları verebilen takip uygulaması.</p>
+                    <div class="project-tech"><span>JS</span><span>Excel Export</span></div>
+                    <div class="project-links">
+                        <a href="https://kanklc34.github.io/personel-puantaj-sistemi/" target="_blank" rel="noopener noreferrer">Canlı Site ↗</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Project 6: Kasap Pro (Desktop/Mobile) -->
+            <article class="project-card" data-category="desktop">
+                <div class="project-image">
+                    <img src="images/projects/kasappro.webp" alt="Kasap Pro" loading="lazy">
+                </div>
+                <div class="project-content">
+                    <h3>Kasap Pro</h3>
+                    <p>.NET MAUI ile geliştirilmiş, barkod tarama özellikli satış takip uygulaması.</p>
+                    <div class="project-tech"><span>.NET MAUI</span><span>SQLite</span><span>C#</span></div>
+                    <div class="project-links">
+                        <a href="https://github.com/kanklc34/seller_system" target="_blank" rel="noopener noreferrer">Kod ↗</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Project 7: Envanter Yönetimi (Desktop) -->
+            <article class="project-card" data-category="desktop">
+                <div class="project-image">
+                    <img src="images/projects/edts.webp" alt="Envanter Sistemi" loading="lazy">
+                </div>
+                <div class="project-content">
+                    <h3>Envanter Yönetim Sistemi</h3>
+                    <p>Depo süreçlerini düzenleyen ve chatbot desteği sunan C# uygulaması.</p>
+                    <div class="project-tech"><span>C#</span><span>SQL Server</span></div>
+                    <div class="project-links">
+                        <a href="https://github.com/kanklc34/edts" target="_blank" rel="noopener noreferrer">Kod ↗</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Project 8: Portfolyo (Web) -->
+            <article class="project-card" data-category="web">
+                <div class="project-image">
+                    <img src="images/projects/portfolyo.webp" alt="Portfolyo" loading="lazy">
+                </div>
+                <div class="project-content">
+                    <h3>Kişisel Portfolyo</h3>
+                    <p>Projelerimi sunduğum modern ve responsive web sitem.</p>
+                    <div class="project-tech"><span>HTML/CSS</span><span>JS</span></div>
+                    <div class="project-links">
+                        <a href="https://github.com/kanklc34/portfolyo" target="_blank" rel="noopener noreferrer">Kod ↗</a>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+    </div>
+</section>
+
 
         <!-- Contact Section -->
         <section id="contact" class="section section-alt">

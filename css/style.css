@@ -375,34 +375,83 @@ body {
     .btn { width: 100%; justify-content: center; }
 }
 
-/* KariyerCraft Özel Kart Efekti */
-.project-card:has(img[alt*="KariyerCraft"]) {
-    border-color: #10b981; /* Matrix Yeşili border */
-    position: relative;
+/* --- TEKNOFEST PROJE --- */
+
+/* Badge (Etiket) Tasarımı */
+.project-badge {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: #ef4444; /* Teknofest Kırmızısı */
+    color: white;
+    padding: 4px 10px;
+    font-size: 0.65rem;
+    font-weight: 700;
+    border-radius: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    z-index: 10;
+    box-shadow: 0 4px 12px rgba(239, 68, 68, 0.3);
+    pointer-events: none;
 }
 
-/* Kartın üzerine gelindiğinde yeşil bir parlama (glow) efekti */
+/* KariyerCraft Kartı İçin Özel Vurgu (Diğerlerini Söndürmez) */
+.project-card:has(img[alt*="KariyerCraft"]) {
+    border-color: rgba(16, 185, 129, 0.2); /* Çok hafif yeşil border */
+}
+
+/* Sadece üzerine gelindiğinde Matrix havasını hissettirir */
 .project-card:has(img[alt*="KariyerCraft"]):hover {
-    box-shadow: 0 0 20px rgba(16, 185, 129, 0.2);
+    border-color: #10b981;
+    box-shadow: 0 12px 40px rgba(16, 185, 129, 0.15);
     transform: translateY(-6px);
 }
 
-/* KariyerCraft kartındaki teknoloji etiketlerini Matrix yeşili yap */
+/* KariyerCraft içindeki teknoloji etiketleri */
 .project-card:has(img[alt*="KariyerCraft"]) .project-tech span {
     color: #10b981;
-    background: rgba(16, 185, 129, 0.1);
-    border: 1px solid rgba(16, 185, 129, 0.3);
+    background: rgba(16, 185, 129, 0.08);
 }
 
-/* KariyerCraft başlığına hafif bir neon efekti */
-.project-card:has(img[alt*="KariyerCraft"]) h3 {
-    color: #059669;
-}
-
-/* Karanlık modda Matrix efektini güçlendir */
+/* Karanlık modda metin parlaması */
 @media (prefers-color-scheme: dark) {
-    .project-card:has(img[alt*="KariyerCraft"]) h3 {
+    .project-card:has(img[alt*="KariyerCraft"]):hover h3 {
         color: #34d399;
-        text-shadow: 0 0 8px rgba(52, 211, 153, 0.3);
+        text-shadow: 0 0 10px rgba(52, 211, 153, 0.2);
     }
+}
+/* --- PROJE FİLTRE BUTONLARI --- */
+
+.project-filters {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: 0.6rem 1.25rem;
+    border: 1px solid var(--color-border);
+    background: var(--color-bg);
+    color: var(--color-text-muted);
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.filter-btn.active, .filter-btn:hover {
+    background: var(--color-primary);
+    color: white;
+    border-color: var(--color-primary);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+}
+
+/* Kartlar gizlenirken/gösterilirken oluşacak animasyon */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
 }
