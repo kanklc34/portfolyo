@@ -374,3 +374,35 @@ body {
     .hero-actions { flex-direction: column; align-items: center; }
     .btn { width: 100%; justify-content: center; }
 }
+
+/* KariyerCraft Özel Kart Efekti */
+.project-card:has(img[alt*="KariyerCraft"]) {
+    border-color: #10b981; /* Matrix Yeşili border */
+    position: relative;
+}
+
+/* Kartın üzerine gelindiğinde yeşil bir parlama (glow) efekti */
+.project-card:has(img[alt*="KariyerCraft"]):hover {
+    box-shadow: 0 0 20px rgba(16, 185, 129, 0.2);
+    transform: translateY(-6px);
+}
+
+/* KariyerCraft kartındaki teknoloji etiketlerini Matrix yeşili yap */
+.project-card:has(img[alt*="KariyerCraft"]) .project-tech span {
+    color: #10b981;
+    background: rgba(16, 185, 129, 0.1);
+    border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+/* KariyerCraft başlığına hafif bir neon efekti */
+.project-card:has(img[alt*="KariyerCraft"]) h3 {
+    color: #059669;
+}
+
+/* Karanlık modda Matrix efektini güçlendir */
+@media (prefers-color-scheme: dark) {
+    .project-card:has(img[alt*="KariyerCraft"]) h3 {
+        color: #34d399;
+        text-shadow: 0 0 8px rgba(52, 211, 153, 0.3);
+    }
+}
