@@ -96,24 +96,51 @@ document.addEventListener('DOMContentLoaded', () => {
             this.src = 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="400" height="225" viewBox="0 0 400 225"%3E%3Crect fill="%23f1f5f9" width="400" height="225"/%3E%3Ctext x="50%25" y="50%25" dominant-baseline="middle" text-anchor="middle" font-family="sans-serif" font-size="16" fill="%2394a3b8"%3EG%C3%B6rsel Yok%3C/text%3E%3C/svg%3E';
         });
     });
-});
+    // 8) Theme Toggle Logic
+    const themeToggle = document.getElementById('theme-toggle');
+    const htmlElement = document.documentElement;
+
+    // LocalStorage veya Sistem Tercihini kontrol et
+    const getCurrentTheme = () => {
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme) return savedTheme;
+        return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    };
+
+    // Temayı uygula
+    const applyTheme = (theme) => {
+        htmlElement.setAttribute('data-theme', theme);
+        localStorage.setItem('theme', theme);
+    };
+
+    // Başlangıçta temayı ayarla
+    applyTheme(getCurrentTheme());
+
+    themeToggle?.addEventListener('click', () => {
+        const newTheme = htmlElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+        applyTheme(newTheme);
+    });
+
+    // Sistem teması değiştiğinde (eğer manuel seçim yoksa) güncelle
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+        if (!localStorage.getItem('theme')) {
+            applyTheme(e.matches ? 'dark' : 'light');
+        }
+    });
     // 7) Project Filtering
     const filterButtons = document.querySelectorAll('.filter-btn');
     const projectCards = document.querySelectorAll('.project-card');
 
     filterButtons.forEach(btn => {
         btn.addEventListener('click', () => {
-            // Aktif buton görselini güncelle
             filterButtons.forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
 
             const filterValue = btn.getAttribute('data-filter');
 
             projectCards.forEach(card => {
-                // Filtreleme mantığı
                 if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
                     card.style.display = 'block';
-                    // Animasyon tetikle (eğer CSS'e @keyframes fadeIn eklediysen)
                     card.style.animation = 'fadeIn 0.4s ease forwards';
                 } else {
                     card.style.display = 'none';
@@ -121,3 +148,4 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     });
+});
