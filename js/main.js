@@ -111,6 +111,17 @@ document.addEventListener('DOMContentLoaded', () => {
     const applyTheme = (theme) => {
         htmlElement.setAttribute('data-theme', theme);
         localStorage.setItem('theme', theme);
+        
+        // Mobile status bar sync
+        const themeColor = theme === 'dark' ? '#0f172a' : '#ffffff';
+        let metaThemeColor = document.querySelector('meta[name="theme-color"]:not([media])');
+        
+        if (!metaThemeColor) {
+            metaThemeColor = document.createElement('meta');
+            metaThemeColor.setAttribute('name', 'theme-color');
+            document.head.appendChild(metaThemeColor);
+        }
+        metaThemeColor.setAttribute('content', themeColor);
     };
 
     // Başlangıçta temayı ayarla
@@ -121,7 +132,7 @@ document.addEventListener('DOMContentLoaded', () => {
         applyTheme(newTheme);
     });
 
-    // Sistem teması değiştiğinde (eğer manuel seçim yoksa) güncelle
+    // Sistem teması değiştiğinde güncelle (Eğer manuel seçim yoksa)
     window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
         if (!localStorage.getItem('theme')) {
             applyTheme(e.matches ? 'dark' : 'light');
