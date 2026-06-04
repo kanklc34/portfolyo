@@ -446,6 +446,7 @@ body {
 }
 
 .project-card {
+    position: relative;
     background: var(--color-bg);
     border: 1px solid var(--color-border);
     border-radius: var(--border-radius);
@@ -648,6 +649,16 @@ body {
     z-index: 10;
     box-shadow: 0 4px 12px rgba(239, 68, 68, 0.3);
     pointer-events: none;
+}
+
+.project-badge.badge-teal {
+    background: #0d9488;
+    box-shadow: 0 4px 12px rgba(13, 148, 136, 0.3);
+}
+
+.project-badge.badge-purple {
+    background: #7c3aed;
+    box-shadow: 0 4px 12px rgba(124, 58, 237, 0.3);
 }
 
 /* Filtre Butonları Paneli */
